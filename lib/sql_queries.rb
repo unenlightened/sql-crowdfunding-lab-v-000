@@ -8,7 +8,7 @@
 
 def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_name
 <<-DOC
-SELECT projects.title, SUM(pledges.amounts) from projects
+SELECT projects.title, SUM(pledges.amount) from projects
 JOIN pledges ON pledges.project_ID = project.id
 DOC
 end
