@@ -42,7 +42,7 @@ end
 
 def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_category
 <<-DOC
-SELECT projects.category, SUM(pledge.amounts) FROM projects
+SELECT projects.category, SUM(pledges.amounts) FROM projects
 JOIN pledges ON pledges.project_id = projects.id
 DOC
 end
