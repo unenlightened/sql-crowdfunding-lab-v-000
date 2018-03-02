@@ -18,6 +18,7 @@ end
 def selects_the_user_name_age_and_pledge_amount_for_all_pledges_alphabetized_by_name
 <<-DOC
 SELECT users.name, pledges.amount FROM users
+JOIN pledges ON pledges.user_id = users.id
 DOC
 end
 
