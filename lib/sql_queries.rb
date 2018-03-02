@@ -24,7 +24,7 @@ end
 
 def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal
 <<-DOC
-SELECT projects.title, SUM(pledges.amount)-projects.funding_goal WHERE SUM(pledges.amount)-projects.funding_goal > 0FROM projects
+SELECT projects.title, SUM(pledges.amount)-projects.funding_goal WHERE SUM(pledges.amount)-projects.funding_goal > 0 FROM projects
 JOIN pledges ON pledges.project_id = projects.id
 DOC
 end
